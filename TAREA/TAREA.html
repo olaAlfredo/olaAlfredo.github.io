@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../POST/Contenido.css" />
+  </head>
+  <body>
+    <div id="crear-content" class="content-panel">
+      <h1 class="content-title">Modelo tarea</h1>
+      <p class="content-description">
+        El modelo de tarea es una representación de los datos relacionados con las tareas de un usuario en el sistema. 
+        Este modelo define los atributos principales de una tarea, como su título, descripción y estado, permitiendo su creación y almacenamiento en la base de datos. A través de este modelo, se facilita la gestión y organización de las tareas, proporcionando una estructura uniforme para realizar operaciones como agregar, actualizar y consultar tareas de manera eficiente y consistente.
+      </p>
+      <div class="authorization-info">
+        <strong>AUTORIZACIÓN REQUERIDA:</strong>
+        <span class="code">ApiKey</span>
+      </div>
+      <div class="auth-content">
+          <p class="auth-description">
+            Única por usuario. 
+            Permite crear, obtener y administrar tareas en un entorno de prueba para un usuario en específico.
+          </p>
+          
+          <div class="auth-details">
+            <div class="auth-scheme">
+              <span>Authorization type:</span>
+              <span class="bearer-tag">bearer token</span>
+            </div>
+            <div class="bearer-format">
+              <span>Bearer format:</span>
+              <span class="format-code">sk_test_xxxxxxxxxxx</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="api-docs">
+      <div class="schema-section">
+        <h3 class="schema-header">REQUEST BODY SCHEMA: application/json</h3>
+
+        <div class="field">
+          <div>
+            <span class="field-name">titulo</span>
+            <span class="field-type">string</span>
+            <span class="required">required</span>
+          </div>
+          <div class="field-description">
+            Representa el título o nombre de la tarea.
+          </div>
+        </div>
+
+        <div class="field">
+          <div>
+            <span class="field-name">descripcion</span>
+            <span class="field-type">string</span>
+            <span class="required">required</span>
+          </div>
+          <div class="field-description">
+            Proporciona una descripción detallada de la tarea.
+          </div>
+        </div>
+
+        <div class="field">
+          <div>
+            <span class="field-name">estado</span>
+            <span class="field-type">boolean</span>
+          </div>
+          <div class="field-description">
+            Indica si la tarea está completa o pendiente.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div class="type">json</div>
+
+        <div class="json">
+          {
+            <span class="key">"id"</span>:<span class="string">"890ce6c56d04f820aa8438af"</span>,
+            <span class="key">"titulo"</span>:<span class="string">"Estudiar para el examen de matemáticas"</span>,
+            <span class="key">"descripcion"</span>:<span class="string">"Revisar los temas del capítulo 5 y resolver problemas del libro."</span>,
+            <span class="key">"estado"</span>:<span class="string">"false"</span>
+          }
+        </div>
+      </div>
+    </div>
+      </div>
+  </body>
+</html>

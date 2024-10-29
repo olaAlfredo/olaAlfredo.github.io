@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../POST/Contenido.css" />
+  </head>
+  <body>
+    <div id="crear-content" class="content-panel">
+      <h1 class="content-title">Crear tarea</h1>
+      <p class="content-description">
+        Crea una nueva tarea en el sistema. Este endpoint permite registrar una
+        nueva tarea con todos sus detalles asociados.
+      </p>
+      <p class="content-description">
+        Una vez creada la tarea, se devolverá un objeto con el ID asignado y
+        todos los datos de la tarea creada.
+      </p>
+      <div class="authorization-info">
+        <strong>AUTORIZACIÓN REQUERIDA:</strong>
+        <span class="code">ApiKey</span>
+      </div>
+      <div class="auth-content">
+          <p class="auth-description">
+            Única por usuario. 
+            Permite crear, obtener y administrar tareas en un entorno de prueba para un usuario en específico.
+          </p>
+          
+          <div class="auth-details">
+            <div class="auth-scheme">
+              <span>Authorization type:</span>
+              <span class="bearer-tag">bearer token</span>
+            </div>
+            <div class="bearer-format">
+              <span>Bearer format:</span>
+              <span class="format-code">sk_test_xxxxxxxxxxx</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="api-docs">
+      <div class="schema-section">
+        <h3 class="schema-header">REQUEST BODY SCHEMA: application/json</h3>
+
+        <div class="field">
+          <div>
+            <span class="field-name">titulo</span>
+            <span class="field-type">string</span>
+            <span class="required">required</span>
+          </div>
+          <div class="field-description">
+            Representa el título o nombre de la tarea.
+          </div>
+        </div>
+
+        <div class="field">
+          <div>
+            <span class="field-name">descripcion</span>
+            <span class="field-type">string</span>
+            <span class="required">required</span>
+          </div>
+          <div class="field-description">
+            Proporciona una descripción detallada de la tarea.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="responses">
+      <div class="schema-section">
+        <h2 style="color: black">Responses</h2>
+
+        <div class="response-item success">
+          <span class="response-code">201</span>
+          <span class="response-description"
+            >Nuevo <span class="customer-tag">tarea</span> creada</span
+          >
+        </div>
+
+        <div class="response-item client-error">
+          <span class="error-code">500</span>
+          <span class="response-description">No se pudo crear la tarea</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 style="margin-bottom: 20px">Request samples</h2>
+
+      <div class="header">
+        <span class="method">POST</span>
+        <input type="text" class="url-input" disabled value="https://localhost:3000/projects/" />
+      </div>
+
+      <div class="content">
+        <div class="type">json</div>
+
+        <div class="json">
+          {
+            <span class="key">"titulo"</span>:<span class="string">"Estudiar para el examen de matemáticas"</span>,
+            <span class="key">"descripcion"</span>:<span class="string">"Revisar los temas del capítulo 5 y resolver problemas del libro."</span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="response-viewer">
+      <h2 style="margin-bottom: 20px; margin-top: 20px">Response samples</h2>
+
+      <div class="header">
+        <span class="method-response">201</span>
+      </div>
+
+      <div class="content">
+        <div class="type">json</div>
+
+        <div class="json">
+          {
+            <span class="key">"id"</span>:<span class="string">"890ce6c56d04f820aa8438af"</span>,
+            <span class="key">"titulo"</span>:<span class="string">"Estudiar para el examen de matemáticas"</span>,
+            <span class="key">"descripcion"</span>:<span class="string">"Revisar los temas del capítulo 5 y resolver problemas del libro."</span>,
+            <span class="key">"estado"</span>:<span class="string">"false"</span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="response-viewer">
+        <h2 style="margin-bottom: 20px; margin-top: 20px"></h2>
+  
+        <div class="header" >
+          <span class="method-response-error">500</span>
+        </div>
+  
+        <div class="content">
+          <div class="type">json</div>
+  
+          <div class="json">
+        {
+            <span class="key">"code"</span>:<span class="string">"500"</span>,
+            <span class="key">"message"</span>:<span class="string">"No se pudo crear la tarea."</span>
+        }
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

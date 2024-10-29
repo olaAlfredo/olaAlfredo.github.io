@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentación</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="dropdown">
+        <!-- Primera sección: Tareas -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" onclick="toggleDropdown(this)">
+            Tareas
+            <span class="arrow">▼</span>
+          </div>
+          <div class="dropdown-content active">
+            <div
+              class="menu-item"
+              data-method="post"
+              data-file="./POST/POST.html"
+            >
+              <span class="method-badge post">POST</span>
+              Crear tareas
+            </div>
+            <div class="menu-item" data-method="get" data-file="./GET/GET.html">
+              <span class="method-badge get">GET</span>
+              Obtener tareas
+            </div>
+            <div class="menu-item" data-method="put" data-file="./PUT/PUT.html">
+              <span class="method-badge put">PUT</span>
+              Editar tarea
+            </div>
+            <div
+              class="menu-item"
+              data-method="delete"
+              data-file="./DELETE/DELETE.html"
+            >
+              <span class="method-badge delete">DELETE</span>
+              Eliminar tarea
+            </div>
+          </div>
+        </div>
+
+        <!-- Segunda sección: Modelos -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" onclick="toggleDropdown(this)">
+            Modelos
+            <span class="arrow">▼</span>
+          </div>
+          <div class="dropdown-content active">
+            <div
+              class="menu-item"
+              data-method="modelTask"
+              data-file="./TAREA/TAREA.html"
+            >
+              <span class="method-badge task">T</span>
+              Tarea
+            </div>
+            <div
+              class="menu-item"
+              data-method="modelUser"
+              data-file="./USER/USER.html"
+            >
+              <span class="method-badge user">U</span>
+              User
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-section">
+            <div class="dropdown-header" onclick="toggleDropdown(this)">
+                Repositorio
+                <span class="arrow">▼</span>
+              </div>
+            <div class="dropdown-content active">
+              <div class="menu-item" data-method="modelTask" data-file="./REPOSITORIO/REPOSITORIO.html">
+                <span class="method-badge repo">R</span>
+                Repositorio
+              </div>
+            </div>
+          </div>
+
+        
+        <!-- Integrantes -->
+        <div class="team-members">
+          <div>Integrantes:</div>
+          <ul>
+            <li>- Alvarez Duarte Jose Alfredo </li>
+            <li>- Ibañez Parra Armando Jair</li>
+            <li>- Cabral Machuca Alejandro Aaron</li>
+            <li>- Frias Bogarin Rodolfo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content" id="contentContainer"></div>
+  </body>
+</html>

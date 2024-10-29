@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    padding: 1rem;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 2rem;
+    width: calc(100% - 250px);
+}
+
+.dropdown-header {
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    padding-left: 1rem;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-item:hover {
+    background-color: #e9ecef;
+}
+
+.method-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.post { background-color: #28a745; color: white; }
+.get { background-color: #17a2b8; color: white; }
+.put { background-color: #ffc107; color: white; }
+.delete { background-color: #dc3545; color: white; }
+.user { background-color: #1900fa; color: white; }
+.task { background-color: #ff8800; color: white; }
+.repo { background-color: #16ec0f; color: white; }
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+.team-members {
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-left: -10px ;
+}
+
+.team-members h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.team-members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-members li {
+    padding: 2px 0;
+    color: #666;
+    font-size: 0.9rem;
+}

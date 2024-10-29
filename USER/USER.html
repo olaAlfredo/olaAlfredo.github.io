@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../POST/Contenido.css" />
+  </head>
+  <body>
+    <div id="crear-content" class="content-panel">
+      <h1 class="content-title">Modelo usuario</h1>
+      <p class="content-description">
+        El modelo de usuario es una representación estructurada de la información relacionada con un usuario en un sistema. 
+        Este modelo se utiliza para gestionar la autenticación y la autorización, asegurando que los usuarios puedan acceder a sus cuentas de manera segura y eficiente.
+      </p>
+      <div class="authorization-info">
+        <strong>AUTORIZACIÓN REQUERIDA:</strong>
+        <span class="code">ApiKey</span>
+      </div>
+      <div class="auth-content">
+          <p class="auth-description">
+            Única por usuario. 
+            Permite crear, obtener y administrar tareas en un entorno de prueba para un usuario en específico.
+          </p>
+          
+          <div class="auth-details">
+            <div class="auth-scheme">
+              <span>Authorization type:</span>
+              <span class="bearer-tag">bearer token</span>
+            </div>
+            <div class="bearer-format">
+              <span>Bearer format:</span>
+              <span class="format-code">sk_test_xxxxxxxxxxx</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="api-docs">
+      <div class="schema-section">
+        <h3 class="schema-header">REQUEST BODY SCHEMA: application/json</h3>
+
+        <div class="field">
+          <div>
+            <span class="field-name">username</span>
+            <span class="field-type">string</span>
+            <span class="required">required</span>
+          </div>
+          <div class="field-description">
+            Representa el nombre de usuario.
+          </div>
+        </div>
+
+        <div class="field">
+          <div>
+            <span class="field-name">password</span>
+            <span class="field-type">string</span>
+            <span class="required">required</span>
+          </div>
+          <div class="field-description">
+            Representa la contraseña del usuario.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div class="type">json</div>
+    
+        <div class="json">
+            [
+                {
+                    <span class="key">"username"</span>: <span class="string">"user 1"</span>,
+                    <span class="key">"password"</span>: <span class="string">"hashed_password_1"</span>
+                },
+                {
+                    <span class="key">"username"</span>: <span class="string">"user 2"</span>,
+                    <span class="key">"password"</span>: <span class="string">"hashed_password_2"</span>
+                }
+            ]
+        </div>
+    </div>
+    </div>
+      </div>
+  </body>
+</html>

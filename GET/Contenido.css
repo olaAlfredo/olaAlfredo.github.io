@@ -1,0 +1,431 @@
+.api-docs {
+    line-height: 1.5;
+    max-width: 800px;
+  }
+  
+  .api-docs .auth-section {
+    margin-bottom: 20px;
+  }
+  
+  .api-docs .auth-header {
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .api-docs .auth-value {
+    font-style: italic;
+  }
+  
+  .api-docs .schema-section {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+  
+  .api-docs .schema-header {
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .api-docs .required {
+    color: #ff0000;
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  
+  .api-docs .field {
+    margin-bottom: 20px;
+  }
+  
+  .api-docs .field-name {
+    font-weight: bold;
+  }
+  
+  .api-docs .field-type {
+    color: black;
+    font-size: 0.9em;
+  }
+  
+  .api-docs .field-description {
+    margin-top: 5px;
+    color: black;
+  }
+  
+  .api-docs .characters {
+    color: #0066cc;
+    font-size: 0.9em;
+  }
+  
+  .responses {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+      sans-serif;
+    max-width: 800px;
+    margin: 20px;
+  }
+  
+  .responses h2 {
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .response-item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+      sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+  
+  /* Contenedor principal */
+  .content-panel,
+  .api-docs,
+  .responses {
+    max-width: 800px;
+    margin: 0 20px;
+  }
+  
+  .content-title {
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .content-description {
+    color: black;
+    line-height: 1.5;
+  }
+  
+  .authorization-info {
+    margin: 20px 0;
+  }
+  
+  .code {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  .api-docs {
+    line-height: 1.5;
+  }
+  
+  .schema-section {
+    margin-top: 20px;
+  }
+  
+  .schema-header {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .field-name {
+    font-weight: bold;
+  }
+  
+  .field-type {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  .required {
+    color: #ff0000;
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  
+  .field-description {
+    margin-top: 5px;
+    color: #333;
+  }
+  
+  /* Estilos para las respuestas */
+  .responses {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .responses h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .response-item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
+  .success {
+    background-color: #f1f9f1;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .client-error,
+  .server-error {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+  }
+  
+  .response-code {
+    color: #1a7f37;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .error-code {
+    color: #dc2626;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .response-description {
+    color: #333;
+  }
+  
+  .customer-tag {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 4px;
+  }
+  
+  /* ------------------------------------------------------------------- */
+  
+  .container {
+    max-width: 810px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: #2d2d2d;
+    padding: 10px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .method {
+    background-color: #17a2b8;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .url-input {
+    flex-grow: 1;
+    background-color: #3c3c3c;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+  }
+  
+  .content {
+    background-color: #1e1e1e;
+    border: 1px solid #2d2d2d;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .json {
+    font-family: monospace;
+    white-space: pre;
+    color: #dcb862;
+  }
+  
+  .json .key {
+    color: #9cdcfe;
+  }
+  
+  .json .string {
+    color: #ce9178;
+  }
+  
+  .json .number {
+    color: #b5cea8;
+  }
+  
+  .type {
+    color: white;
+  }
+  /* ------------------------------------------------------- */
+  
+  .response-viewer {
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 810px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  
+  .response-buttons {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .response-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .error {
+    background-color: #333;
+    color: #f44336;
+  }
+  
+  .controls {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .control-btn {
+    background: none;
+    border: none;
+    color: #858585;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+  }
+  
+  .control-btn:hover {
+    color: #fff;
+  }
+  
+  .key {
+    color: #9cdcfe;
+  }
+  
+  .string {
+    color: #ce9178;
+  }
+  
+  .number {
+    color: #b5cea8;
+  }
+  
+  .boolean {
+    color: #569cd6;
+  }
+  
+  .method-response {
+    background-color: #228b22;
+    color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .method-response-error {
+    background-color: #db2828;
+    color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .authorizations-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  
+  .auth-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+  }
+  
+  .arrow-down {
+    font-size: 12px;
+  }
+  
+  .auth-content {
+    background-color: #f9fafb;
+    padding: 16px;
+    margin-top: 4px;
+  }
+  
+  .auth-intro {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  
+  .auth-section {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .auth-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  
+  .lock-icon {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .auth-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .auth-details {
+    font-size: 14px;
+  }
+  
+  .auth-scheme, .bearer-format {
+    margin-bottom: 8px;
+  }
+  
+  .bearer-tag {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  
+  .format-code {
+    color: #666;
+    margin-left: 8px;
+    font-family: monospace;
+  }

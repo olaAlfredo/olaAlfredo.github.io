@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../DELETE/Contenido.css" />
+  </head>
+  <body>
+    <div id="crear-content" class="content-panel">
+      <h1 class="content-title">Eliminar tarea</h1>
+      <p class="content-description">
+        Elimina permanentemente una tarea del sistema. Este endpoint permite eliminar una
+        tarea con todos sus detalles asociados.
+      </p>
+      <p class="content-description">
+        Se elimina un objeto con el ID asignado y
+        todos los datos de la tarea creada.
+      </p>
+      <div class="authorization-info">
+        <strong>AUTORIZACIÓN REQUERIDA:</strong>
+        <span class="code">ApiKey</span>
+      </div>
+      <div class="auth-content">
+          <p class="auth-description">
+            Única por usuario. 
+            Permite crear, obtener y administrar tareas en un entorno de prueba para un usuario en específico.
+          </p>
+          
+          <div class="auth-details">
+            <div class="auth-scheme">
+              <span>Authorization type:</span>
+              <span class="bearer-tag">bearer token</span>
+            </div>
+            <div class="bearer-format">
+              <span>Bearer format:</span>
+              <span class="format-code">sk_test_xxxxxxxxxxx</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="api-docs">
+        <div class="schema-section">
+          <h3 class="schema-header">PARAMETROS</h3>
+    <div class="field">
+        <div>
+          <span class="field-name">id</span>
+          <span class="field-type">string</span>
+          <span class="required">required</span>
+        </div>
+        <div class="field-description">
+          Id del objeto a eliminar.
+        </div>
+      </div>
+      </div>
+      </div>
+
+    <div class="responses">
+      <div class="schema-section">
+        <h2 style="color: black">Responses</h2>
+
+        <div class="response-item success">
+          <span class="response-code">201</span>
+          <span class="response-description"
+            >La <span class="customer-tag">tarea</span> ha sido eliminada</span
+          >
+        </div>
+
+        <div class="response-item client-error">
+          <span class="error-code">500</span>
+          <span class="response-description">No se pudo eliminar la tarea</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 style="margin-bottom: 20px">Request samples</h2>
+
+      <div class="header">
+        <span class="method">DELETE</span>
+        <input type="text" class="url-input" disabled value="https://localhost:3000/projects/890ce6c56d04f820aa8438af" />
+      </div>
+
+      <div class="content">
+        <div class="type">JavaScript</div>
+    
+        <div class="json">
+            {
+                <span class="key">"authHeader"</span>: <span class="string">"req.headers['authorization']"</span>,
+                <span class="key">"token"</span>: <span class="string">"authHeader && authHeader.split(' ')[1]"</span>,
+                <span class="key">"respuesta"</span>: {
+                    <span class="key">"403"</span>: <span class="string">"Token requerido"</span>,
+                    <span class="key">"403"</span>: <span class="string">"Token inválido"</span>,
+                    <span class="key">"401"</span>: <span class="string">"Token expirado"</span>,
+                    <span class="key">"400"</span>: <span class="string">"Error al verificar el token"</span>
+                }
+            }
+        </div>
+    </div>
+    </div>
+
+    <div class="response-viewer">
+      <h2 style="margin-bottom: 20px; margin-top: 20px">Response samples</h2>
+
+      <div class="header">
+        <span class="method-response">201</span>
+      </div>
+
+      <div class="content">
+        <div class="type">json</div>
+
+        <div class="json">
+          {
+            <span class="key">"id"</span>:<span class="string">"890ce6c56d04f820aa8438af"</span>,
+            <span class="key">"titulo"</span>:<span class="string">"Estudiar para el examen de matemáticas"</span>,
+            <span class="key">"descripcion"</span>:<span class="string">"Revisar los temas del capítulo 5 y resolver problemas del libro."</span>,
+            <span class="key">"estado"</span>:<span class="string">"false"</span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="response-viewer">
+        <h2 style="margin-bottom: 20px; margin-top: 20px"></h2>
+  
+        <div class="header" >
+          <span class="method-response-error">500</span>
+        </div>
+  
+        <div class="content">
+          <div class="type">json</div>
+  
+          <div class="json">
+        {
+            <span class="key">"code"</span>:<span class="string">"500"</span>,
+            <span class="key">"message"</span>:<span class="string">"No se pudo eliminar la tarea."</span>
+        }
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

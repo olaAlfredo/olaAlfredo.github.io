@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../GET/Contenido.css" />
+  </head>
+  <body>
+    <div id="crear-content" class="content-panel">
+      <h1 class="content-title">Obtener tareas</h1>
+      <p class="content-description">
+        Obtiene la lista completa de tareas disponibles en el sistema. Este endpoint permite obtener las
+        tareas registradas con todos sus detalles asociados.
+      </p>
+      <p class="content-description">
+        Se devolveran objetos con el ID asignado y
+        todos los datos de las tareas creadas.
+      </p>
+      <div class="authorization-info">
+        <strong>AUTORIZACIÓN REQUERIDA:</strong>
+        <span class="code">ApiKey</span>
+      </div>
+      <div class="auth-content">
+          <p class="auth-description">
+            Única por usuario. 
+            Permite crear, obtener y administrar tareas en un entorno de prueba para un usuario en específico.
+          </p>
+          
+          <div class="auth-details">
+            <div class="auth-scheme">
+              <span>Authorization type:</span>
+              <span class="bearer-tag">bearer token</span>
+            </div>
+            <div class="bearer-format">
+              <span>Bearer format:</span>
+              <span class="format-code">sk_test_xxxxxxxxxxx</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="responses">
+      <div class="schema-section">
+        <h2 style="color: black">Responses</h2>
+
+        <div class="response-item success">
+          <span class="response-code">200</span>
+          <span class="response-description"
+            >Obtuvo <span class="customer-tag">tareas</span> encontradas</span
+          >
+        </div>
+
+        <div class="response-item client-error">
+          <span class="error-code">404</span>
+          <span class="response-description">No se encontraron tareas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 style="margin-bottom: 20px">Request samples</h2>
+
+      <div class="header">
+        <span class="method">GET</span>
+        <input type="text" class="url-input" disabled value="https://localhost:3000/projects/" />
+      </div>
+
+      <div class="content">
+        <div class="type">JavaScript</div>
+    
+        <div class="json">
+            {
+                <span class="key">"authHeader"</span>: <span class="string">"req.headers['authorization']"</span>,
+                <span class="key">"token"</span>: <span class="string">"authHeader && authHeader.split(' ')[1]"</span>,
+                <span class="key">"respuesta"</span>: {
+                    <span class="key">"403"</span>: <span class="string">"Token requerido"</span>,
+                    <span class="key">"403"</span>: <span class="string">"Token inválido"</span>,
+                    <span class="key">"401"</span>: <span class="string">"Token expirado"</span>,
+                    <span class="key">"400"</span>: <span class="string">"Error al verificar el token"</span>
+                }
+            }
+        </div>
+    </div>
+    </div>
+
+    <div class="response-viewer">
+      <h2 style="margin-bottom: 20px; margin-top: 20px">Response samples</h2>
+
+      <div class="header">
+        <span class="method-response">200</span>
+      </div>
+
+      <div class="content">
+        <div class="type">json</div>
+      
+        <div class="json">
+          [
+            {
+              <span class="key">"id"</span>: <span class="string">"0jZIM0Q0pFbqpfmdJNXH"</span>,
+              <span class="key">"titulo"</span>: <span class="string">"Tarea 10"</span>,
+              <span class="key">"descripcion"</span>: <span class="string">"Descripción de la tarea 5"</span>,
+              <span class="key">"estado"</span>: <span class="string">"false"</span>
+            },
+            {
+              <span class="key">"id"</span>: <span class="string">"Wvp5dbHWddyDdrm1rs9r"</span>,
+              <span class="key">"titulo"</span>: <span class="string">"tarea 1"</span>,
+              <span class="key">"descripcion"</span>: <span class="string">"descripcion 1"</span>,
+              <span class="key">"estado"</span>: <span class="string">"false"</span>
+            },
+            {
+              <span class="key">"id"</span>: <span class="string">"cqCev5sz68KddJhDxAyL"</span>,
+              <span class="key">"titulo"</span>: <span class="string">"123"</span>,
+              <span class="key">"descripcion"</span>: <span class="string">"Descripción de la tarea 5"</span>,
+              <span class="key">"estado"</span>: <span class="string">"false"</span>
+            }
+          ]
+        </div>
+      </div>
+    </div>
+
+    <div class="response-viewer">
+        <h2 style="margin-bottom: 20px; margin-top: 20px"></h2>
+  
+        <div class="header" >
+          <span class="method-response-error">404</span>
+        </div>
+  
+        <div class="content">
+          <div class="type">json</div>
+  
+          <div class="json">
+        {
+            <span class="key">"code"</span>:<span class="string">"404"</span>,
+            <span class="key">"message"</span>:<span class="string">"No se encontraron tareas"</span>
+        }
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
